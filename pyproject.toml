@@ -8,7 +8,8 @@ authors = [
 readme = "README.md"
 requires-python = ">=3.12,<4.0"
 dependencies = [
-    "fastapi[standard]>=0.119.0,<0.120.0"
+    "fastapi[standard]>=0.119.0,<0.120.0",
+    "email-validator (>=2.3.0,<3.0.0)"
 ]
 
 [tool.poetry]
@@ -17,6 +18,8 @@ packages = [{include = "fast_zero"}]
 [tool.ruff]
 line-length = 79
 extend-exclude = ["migrations"]
+
+[tool.lint.select]
 select = ["I", "F", "E", "W", "PL", "PT"]
 
 [tool.pytest.ini_options]
